@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    public float speed = 5.0f;
-    public GameObject focalPoint;
-    public bool hasPowerup;
-    private float powerUpStrength = 15.0f;
-    public GameObject powerupIndicator;
+    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private GameObject focalPoint;
+    [SerializeField] private bool hasPowerup;
+    [SerializeField] private float powerUpStrength = 15.0f;
+    [SerializeField] private GameObject powerupIndicator;
+    private const string Folcal Point = "Folcal Point"
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
-        focalPoint = GameObject.Find("Focal Point");
+        focalPoint = GameObject.Find(Focal Point);
     }
 
     // Update is called once per frame
